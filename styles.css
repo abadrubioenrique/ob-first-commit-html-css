@@ -234,8 +234,7 @@
    }
     .login-panel {
         padding-top: 0;
-        padding-left: 30%;
-        padding-right: 0%;
+        margin: 2% 25%;
    }
     .copyright {
         position: static;
@@ -243,31 +242,19 @@
         padding-bottom: 0;
    }
 }
-@media (max-width: 960px) {
+
+@media (max-width: 1024px) {
     .login-panel {
         padding-top: 0;
-        padding-left: 25%;
-        padding-right: 0%;
+        margin: 2% 18%;
    }
+
 }
+
 @media (max-width: 768px) {
     .login-panel {
-        padding-top: 10%;
-        padding-left: 17%;
+        padding-top: 0;
+        margin: 2% 5%;
    }
-    .copyright {
-        position: static;
-        padding-top: 10%;
-   }
-}
-@media (max-width: 640px) {
-    .login-panel {
-        padding-left: 10%;
-   }
-}
-@media (max-width: 400px) {
-    .login-panel {
-        padding-left: 5%;
-        padding-right: 0%;
-   }
+
 }
