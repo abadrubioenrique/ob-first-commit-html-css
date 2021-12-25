@@ -1,0 +1,261 @@
+.studentsPage {
+	position: absolute;
+	background-position: center center;
+	background-attachment: fixed;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-color: #f8f8f9;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	margin: 0;
+	padding: 0;
+	right: 0;
+}
+.students-data{
+	position: absolute;
+	border: 1px solid;
+	border-radius: 20px;
+	border-color: #e6e6ea;
+	background-color: white;
+  margin-bottom: 20px;
+  height: 784px;
+	width: calc(500px - 48px);
+    height: calc(784px - 10px);
+    padding: 24px;
+}
+.return{
+    text-decoration: none;
+    color: #121625;
+    font-weight: bold;
+    margin-left: 30px;
+}
+.return i{
+    margin-right: 12px;
+}
+.data-container {
+  display: grid; 
+  grid-auto-flow: row dense; 
+  grid-auto-columns: 1fr; 
+  grid-auto-rows: 1fr; 
+  grid-template-columns: 1fr 1fr; 
+  grid-template-rows: 1fr 1f 1fr 1fr 1fr 1fr ; 
+  gap: 20px 30px; 
+  grid-template-areas: 
+    "a2 a2"
+    "b2 c2"
+    "d2 e2"
+    "f2 g2"
+    "h2 h2"
+    "i2 i2"; 
+  justify-items: start; 
+  width: 100%; 
+  height: 10%;
+
+}
+.a2 { 
+  grid-area: a2; 
+	width: 100%;
+}
+.a2 .input-text{
+  margin-bottom: 0;
+  margin-right: 0;
+  height: calc(40px - 24px);
+}
+.b2 { 
+  grid-area: b2; 
+  width: 100%;
+}
+.b2 .input-text{
+  margin: 0;
+  margin-top: 12px;
+  padding-bottom: 10px;
+  height: 40px;
+  width: 100%;
+}
+.c2 { 
+  grid-area: c2; 
+  width: 100%;
+}
+.c2 .input-text{
+  margin: 0;
+  margin-top: 12px;
+  padding-bottom: 10px;
+  height: 40px;
+  width: 100%;
+}
+.d2 { 
+  grid-area: d2; 
+  width: 100%;
+}
+.d2 .input-text{
+  margin: 0;
+  margin-top: 12px;
+  padding-right: 0;
+  padding-bottom: 10px;
+  width: calc(100% - 12px);
+  height: calc(40px - 24px);
+}
+.e2 { 
+  grid-area: e2; 
+  width: 100%;
+}
+.e2 .input-text{
+  margin: 0;
+  margin-top: 12px;
+  padding-right: 0;
+  padding-bottom: 10px;
+  width: calc(100% - 12px);
+  height: calc(40px - 24px);
+}
+.f2 { 
+  grid-area: f2; 
+  width: 100%;
+}
+.f2 .input-text{
+  margin: 0;
+  margin-top: 12px;
+  padding-bottom: 10px;
+  height: 40px;
+  width: 100%;
+}
+.g2 { 
+  grid-area: g2; 
+  width: 100%;
+}
+.g2 .input-text{
+  margin: 0;
+  margin-top: 12px;
+  padding-bottom: 10px;
+  height: 40px;
+  width: 100%;
+}
+.h2 { 
+  grid-area: h2; 
+  width: 100%;
+}
+.i2 { 
+  grid-area: i2; 
+  width: 100%;
+}
+
+.student-info{
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 114px;
+  z-index: 1;
+  margin-bottom: 24px;
+}
+
+.student-name{
+  display: block;
+  position: static;
+  font-style: normal;
+  width: 100%;
+
+}
+.student-name h1{
+  height: 28px;
+  font-weight: 800;
+  font-size: 24px;
+  line-height: 28px;
+  margin: 0;
+  margin-top: 18px;
+  margin-left: 24px;
+  margin-bottom: 7px;
+}
+
+.student-img{
+  position: relative;
+  width: 90px;
+  height: 90px;
+  border: 4px solid #E6E6EA;
+  border-radius: 20px;
+}
+
+.student-ubication{
+  display: flex;
+  margin-left: 24px;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 16px;
+  height: 16px;
+  color: #A5A8B3;
+}
+
+.student-ubication p{
+  margin: 0;
+  margin-left: 11px;
+  margin-right: 8px;
+}
+
+.student-ubication span{
+  font-size: 12px;
+  margin-top: -1px;
+}
+
+.btn-delete{
+	position: relative;
+	cursor: pointer;
+	background: white;
+	border: none;
+	color: #121625;;
+	border-radius: 8px;
+	height: 40px;
+	padding: 12px;
+	padding-left: 32px;
+	font-weight: bold;
+	font-size: 15px;
+	line-height: 18px;
+  border: 1px solid #E6E6EA;
+  box-sizing: border-box;
+  border-radius: 8px;
+  margin-left: 10px;
+}
+
+.btn-delete i{
+	position: absolute;
+	left: 10px;
+	top: 13px;
+}
+.student-tags{
+  width: 452px;
+}
+
+.student-tags{
+	position: relative;
+}
+
+.student-tags .select2-container .select2-selection--multiple {
+	min-height: 40px;
+	max-height: 40px;
+	min-width: 452px;
+}
+
+.student-cv{
+  position: relative;
+  width: 100%;
+
+}
+
+.pdf{
+  
+  position: absolute;
+  top: 110px;
+  right: 0;
+
+}
+
+.pdf embed{
+  border-radius: 20px;
+  background: #333639;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.6);
+  width: 1120px;
+  height: 780px;
+  margin-right: 102px;
+  margin-bottom: 40px;
+  margin-left: 40px;
+}

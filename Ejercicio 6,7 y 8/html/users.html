@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+    <!-- Select2 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css"/>
+    <!-- Personal Css -->
+    <link rel="stylesheet" href="../css/login.css">
+    <link rel="stylesheet" href="../css/users.css">
+    
+    <title>Document</title>
+</head>
+<body>
+    <div class='usersPage'>
+
+        <header class='usersHeader'>
+            <div class='title-users'>
+            
+           <h1 class='title'>OpenBootcamp <span class='subtitle'>| Alumnos</span></h1>
+            </div>
+            <div class='username'>
+                <div class='user-icon'>
+                    <h1>NA</h1>
+                </div>
+                <div class='name'>UserName
+                </div>
+                <i class="bi bi-chevron-down dropDown"></i>
+            </div>
+        </header>
+
+        <div class='usersPanel'>
+        <button class='btn-add' id="myBtn"><i class="bi bi-plus-lg"></i> Añadir alumnos</button>
+            <div class='students'>
+                <h2>Alumnos</h2>
+                <div class='search-bar'>
+                <i class="bi bi-search search-icon"></i>
+                <input type='text' id="search" placeholder='Buscar por Nombre, Email o Palabra clave...'/>
+                </div>
+                
+
+            </div>
+            <div class='table-responsive'>
+            <table id="students">
+                <thead>
+                    <tr>
+                        <th onclick="sortTable(0)">Nombre <i class="bi bi-arrow-down-up"></i></th>
+                        <th onclick="sortTable(1)" class='city'>Ciudad <i class="bi bi-arrow-down-up"></i></th>
+                        <th onclick="sortTable(2)" class='city'>País <i class="bi bi-arrow-down-up"></i></th>
+                        <th onclick="sortTable(3)">Teléfono <i class="bi bi-arrow-down-up"></i></th>
+                        <th onclick="sortTable(4)">Correo electrónico <i class="bi bi-arrow-down-up"></i></th>
+                        <th onclick="sortTable(5)" class='tags'>Etiquetas <i class="bi bi-arrow-down-up"></i></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr id="datos">
+                        <td>Álvaro Sánchez Monteagudo</td>
+                        <td>Valencia</td>
+                        <td>España</td>
+                        <td>+34 657 85 25 46</td>
+                        <td>asangudo@gmail.com</td>
+                        <td>HTML&CSS Angular +4</td>
+                    </tr>
+                    <tr id="datos">
+                        <td>Amparo Herrera Climent</td>
+                        <td>Sevilla</td>
+                        <td>España</td>
+                        <td>+34 689 25 48 65</td>
+                        <td>hcliment@gmail.com</td>
+                        <td>HTML&CSS React +2</td>
+                    </tr>
+                    <tr id="datos">
+                        <td>Antonio Delgado Jimeno</td>
+                        <td>Gijón</td>
+                        <td>España</td>
+                        <td>+34 925 65 54 25</td>
+                        <td>djimeno@gmail.com</td>
+                        <td>HTML&CSS +1</td>
+                    </tr>
+                    <tr id="datos">
+                        <td>Carlos Yuste Guerrero</td>
+                        <td>Oviedo</td>
+                        <td>España</td>
+                        <td>+34 697 82 95 65</td>
+                        <td>yguerrero@gmail.com</td>
+                        <td>Angular React +1</td>
+                    </tr>
+                </tbody>
+            </table>
+            </div>
+            </div>
+           
+        <div class='search-filter'>
+            <h1>Filtros de búsqueda <i class="bi bi-trash" onclick="mostrar(tag_placeholder)"></i></h1>
+            <div class='campos'>
+            
+            <div class='tags-main'>
+                <i class="bi bi-chevron-down tags"></i>
+                <p class="tag_placeholder" id="tag_placeholder" >Escribe para buscar...</p>
+                <label class='credentials'>Etiquetas</label>
+                    <select class="js-example-basic-multiple input-text" name="states[]" multiple="multiple">
+                        <option value="AL">Alabama</option>
+                        <option value="ST">Stormwing</option>
+                        <option value="WY">Wyoming</option>
+                      </select>
+            </div>
+            <div class="tags_container" id="tags_container">
+            </div>
+            <div class='tags-main'>
+                <i class="bi bi-chevron-down tags"></i>
+                <label class='credentials '>Pais</label>
+                <input class='input-text' type='text' placeholder='Escribe para buscar...'/>
+            </div>
+            <div class='tags-main'>
+                <i class="bi bi-chevron-down tags"></i>
+                <label class='credentials '>Ciudad</label>
+                <input class='input-text' type='text' placeholder='Escribe para buscar...'/>
+            </div>
+            <div class='tags-main'>
+            <label class='credentials '>Presencial/ a distancia</label>
+            <label class="remember-label">Presencial
+                <input type="checkbox"/>
+                <span class="checkmark"></span>
+            </label>
+            <label class="remember-label">En Remoto
+                <input type="checkbox"/>
+                <span class="checkmark"></span>
+            </label>
+            </div>
+            <div class='tags-main'>
+            <label class='credentials '>Posibilidad traslado</label>
+            <label class="remember-label">Si
+                <input type="checkbox"/>
+                <span class="checkmark"></span>
+            </label>
+            <label class="remember-label">No
+                <input type="checkbox"/>
+                <span class="checkmark"></span>
+            </label>
+            </div>
+            </div>
+
+        </div>
+
+
+    </div>
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h1 class="modal-title">Nuevo Alumno</h1>
+      <div class="modal-container">    
+        <div class="a1">
+            <label class='credentials'>Nombre y Apellidos</label>
+            <input class='input-text' type='text' placeholder='Ej: Juan Perez Lorca'/>
+        </div>
+        <div class="b1">
+            <label class='credentials'>Foto de perfil</label>
+            <div class="upload">
+                <button class="btn-upload">
+                    Subir imagen
+                    <i class="bi bi-cloud-arrow-up"></i>
+                </button>
+                <div class="info-upload">
+                    <p>Archivos soportados:<span> .png, .jpg y .jpeg</span></p>
+                    <p>Tamaño de archivo máximo:<span> 2 MB</span></p>
+                </div>
+            </div>
+        </div>
+        <div class="c1">
+            <label class='credentials'>Documento CV</label>
+            <div class="upload">
+                <button class="btn-upload">
+                    Subir documento PDF
+                    <i class="bi bi-cloud-arrow-up"></i>
+                </button>
+                <div class="info-upload">
+                    <p>Archivos soportados:<span> .pdf</span></p>
+                    <p>Tamaño de archivo máximo:<span> 20 MB</span></p>
+                </div>
+            </div>
+        </div>
+        <div class="d1">
+
+                <label class='credentials '>Etiquetas</label>
+                <div class="modal-selector">
+                    <select class="js-example-basic-multiple input-text" name="states[]" multiple="multiple">
+                        <option value="AL">Alabama</option>
+                        <option value="ST">Stormwing</option>
+                        <option value="WY">Wyoming</option>
+                      </select>
+                    </div>
+        </div>
+        <div class="Datos container">
+            <div class="a">
+                <label class='credentials'>País</label>
+                <select class='input-text' >
+                    <option value="" disabled selected>Elige un país</option>
+                    <option>España</option>
+                </select>
+
+            </div>
+            <div class="b">
+                <label class='credentials'>Ciudad</label>
+                <select class='input-text'>
+                    <option value="" disabled selected>Elige una ciudad</option>
+                    <option>Valencia</option>
+                    <option>Sevilla</option>
+                    <option>Gijón</option>
+                    <option>Oviedo</option>
+                </select>
+            </div>
+            <div class="c">
+                <label class='credentials'>Nº Teléfono</label>
+                <input class='input-text' type='text' placeholder='Ej: +34 612 34 56 78'/>
+            </div>
+            <div class="d">
+                <label class='credentials'>Email</label>
+                <input class='input-text' type='email' placeholder='Ej: user@mail.com'/>
+            </div>
+            <div class="e">
+                <label class='credentials'>Presencialidad</label>
+                <select class='input-text'>
+                    <option value="" disabled selected>Elige una opción</option>
+                    <option>Si</option>
+                    <option>No</option>
+                </select>
+            </div>
+            <div class="f">
+                <label class='credentials'>Traslado</label>
+                <select class='input-text'>
+                    <option value="" disabled selected>Elige una opción</option>
+                    <option>Si</option>
+                    <option>No</option>
+                </select>
+            </div>
+        </div>
+       
+
+    </div>
+    <div class="modal-footer">
+        <div class="modal-buttons">
+            <div class="align-rigth">
+            <button  type="submit" class="modal-btn modal-btn-disabled">Guardar</button>
+            <button id="cancelar" class="modal-btn">Cancelar</button>
+        </div>
+        </div>
+        
+    </div>
+    </div>
+  
+  </div>
+
+    <!-- JQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <!-- Select2 -->
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <!-- Personal Scripts -->
+    <script src="../js/users.js"></script>
+    <script src="../js/filtertable.js"></script>
+    <script src="../js/showHideModal.js"></script>
+    <script src="../js/sortTable.js"></script>
+    <script src="../js/select2.js"></script>
+</body>
+
+
+
+</html>
